@@ -1,0 +1,49 @@
+﻿<Application
+    <Page
+    x:Class="YourApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <!-- SplitView: Sidebar and Main Content -->
+        <SplitView DisplayMode="Inline" IsPaneOpen="True" >
+            <!-- Sidebar -->
+            <SplitView.Pane>
+                <Grid Background="#333" Width="250">
+                    <ListView>
+                        <ListViewItem Content="Home">
+                            <ListViewItem.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel>
+                                        <Button Content="Dashboard" Click="DashboardButton_Click"/>
+                                        <Button Content="Batch Select" Click="BatchSelectButton_Click"/>
+                                        <Button Content="Menu" Click="MenuButton_Click"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListViewItem.ItemTemplate>
+                        </ListViewItem>
+                        <ListViewItem Content="Batch Overview" Click="BatchOverviewButton_Click"/>
+                        <ListViewItem Content="Ingredient Tracker" Click="IngredientTrackerButton_Click"/>
+                        <ListViewItem Content="Usage Summary" Click="UsageSummaryButton_Click"/>
+                        <ListViewItem Content="Alerts" Click="AlertsButton_Click"/>
+                        <ListViewItem Content="Audit Log" Click="AuditLogButton_Click"/>
+                        <ListViewItem Content="Settings" Click="SettingsButton_Click"/>
+                    </ListView>
+                </Grid>
+            </SplitView.Pane>
+
+            <!-- Main Content Area -->
+            <SplitView.Content>
+                <Grid Background="White">
+                    <!-- Placeholder for dynamic content based on selected category -->
+                    <TextBlock x:Name="MainContent" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24"/>
+                </Grid>
+            </SplitView.Content>
+        </SplitView>
+    </Grid>
+    </Page>
+</Application>
