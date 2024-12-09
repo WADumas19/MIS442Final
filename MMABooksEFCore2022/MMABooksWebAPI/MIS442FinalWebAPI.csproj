@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MMABooksEFClasses\MMABooksEFClasses.csproj" />
+    <ProjectReference Include="..\MMABooksEFClasses\MIS442FinalEFClasses.csproj" />
   </ItemGroup>
 
 </Project>
